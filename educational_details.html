@@ -1,0 +1,121 @@
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UFT-8">
+            <title>Educational Details</title>
+            <link rel="stylesheet" href="education.css">
+            <script>
+                function validateForm(){
+                    var ssc1,ssc2,hsc1,hsc2;
+                    ssc1=document.getElementById("agg1").value;
+                    ssc2=document.getElementById("per1").value;
+                    if(isNaN(ssc1)|| ssc1>500 || ssc1<0 || ssc1==""){
+                        alert("Please enter valid marks credentials");
+                        return true;
+                    }
+
+                    if(isNaN(ssc2)|| ssc2<0 || ssc2>100 || ssc2 ==""){
+                        alert("Please enter valid marks credentials");
+                        return true;
+                    }
+
+                    hsc1=document.getElementById("agg2").value;
+                    hsc2=document.getElementById("per2").value;
+                    if(isNaN(hsc1)|| hsc1>600 || hsc1<0 || hsc1==""){
+                        alert("Please enter valid marks credentials");
+                        return true;
+                    }
+
+                    if(isNaN(ssc2)|| hsc2<0 || hsc2>100 || hsc2==""){
+                        alert("Please enter valid marks credentials");
+                        return true;
+                    }
+
+                }
+            </script>
+
+            
+        </head>
+
+        
+            
+            <body background="BG2.jpg">
+                    <div class="upperbody">
+                        
+                        <a href="page1.php" ><img width="415px" height="121px" src="img5.jpg"></a>
+                        <a href="page1.php"   style="margin-top: 50px">Home</a>
+                        <a href="listofclg.html"  style="margin-top: 50px">Colleges</a>	
+                        <a href="aboutus.html"  style="margin-top: 50px">About Us</a>
+                        <a href="contactus.html"  style="margin-top: 50px">Contact Us</a>
+                        <button class="b6" onclick="location.href='logout.php';">Log out</button>
+                            
+                    </div>
+                <br><br>
+            <marquee>Educational Details &nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;Educational Details &nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;Educational Details</marquee><br><br>
+            
+            
+        <form  action="education.php" onsubmit="return validatForm()" method="post">
+                <fieldset>
+                        <legend><b>SSC DETAILS</b></legend>
+                        <br>
+                    Enter the name of the Secondary Board : <select name="xb"><option value="blank"></option> <option value="state">Maharashtra State Board of Secondary Studies</option> <option value="cbse">Central Board of Secondary Education</option> <option value="icse">Indian Certificate is Secondary Education</option></select>
+                    <br><br>
+                    SSC Aggregate: <input type="text" required name="sscagg" size="22" placeholder="Enter SSC marks(out of 500)" id="agg1">
+                    <br><br>
+                    SSC Percentage:<input type="text" required name="sscper" size="5"  id="per1">
+                    <br><br>
+                </fieldset>
+                
+            
+            <br><br>
+            
+                    <fieldset>
+                        <legend><b>HSC DETAILS</b></legend>
+                        <br>
+                    Enter the name of the Higher Secondary Board : <select name="tb"><option value="blank"></option> <option value="state">Maharashtra State Board of Secondary Studies</option> <option value="cbse">Central Board of Secondary Education</option> <option value="icse">Indian Certificate is Secondary Education</option></select>
+                    <br><br>
+                    HSC Aggregate: <input type="text" name="hscagg" size="22"  id="agg2" placeholder="Enter HSC marks(out of 600)">
+                    <br><br>
+                    HSC Percentage:<input type="text" name="hscper" size="5" id="per2">
+                    <br><br> 
+                </fieldset>
+                
+            
+            <br><br>
+            
+        
+                    <fieldset>
+                            <legend><b>CET Details</b></legend>
+                        <br>
+                    Physics:<input type="text" name="cetp" size="5">
+                    <br><br>
+                    Chemistry:<input type="text" name="cetc" size="5">
+                    <br><br>
+                    Maths:<input type="text" name="cetm" size="5">
+                    <br><br> 
+                    Total Marks:<input type="text" name="cett" size="5">
+                    <br><br> 
+                </fieldset>
+            
+            <br><br>
+            
+            Have you appeared JEE Examination? <input type="radio" name="appeared" value="yes">YES  <input type="radio" name="appeared" value="no">NO
+            <br><br>
+            
+                
+                    <fieldset>
+                            <legend><b>JEE Details</b></legend>
+                    Physics: <input type="text" name="jeep" size="5">
+                    <br><br>
+                    Chemistry: <input type="text" name="jeec" size="5">
+                    <br><br>
+                    Maths: <input type="text" name="jeem" size="5">
+                    <br><br>
+                    Total Marks:<input type="text" name="jeet" size="5">
+                    <br>
+                </fieldset>
+                
+            <input name="educationsubmit" type="submit" margin-left=15%>
+        </form>
+        </body>
+    </html>

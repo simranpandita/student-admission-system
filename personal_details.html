@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Personal Details</title>
+        <link rel="stylesheet" href="personalcss.css">
+
+    </head>
+    <style>
+      marquee{  width: 100%;
+        height:"40px";
+         padding: 10px 0 30px 0;
+         background-color: black;
+         
+         color:yellow;
+         font-size:40px;
+      }
+         .b1{
+             margin-left: 15%;
+            }
+            .b6{
+        margin-left:85%;   
+    }
+        
+      
+         </style>
+    
+
+    <body  background="BG2.jpg" >
+            <div class="upperbody">
+                
+                <a href="page1.php" ><img width="415px" height="121px" src="img5.jpg"></a>
+                 <a href="page1.php"   style="margin-top: 50px">Home</a>
+                <a href="listofclg.html"  style="margin-top: 50px">Colleges</a>	
+                <a href="aboutus.html"  style="margin-top: 50px">About Us</a>
+                <a href="contactus.html"  style="margin-top: 50px">Contact Us</a>
+                <button class="b6" onclick="location.href='logout.php';">Log out</button>
+                    
+            </div>
+            <br><br>
+            <marquee>Personal Details       &nbsp;   &nbsp; &nbsp;    &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;      Personal Details &nbsp;   &nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;Personal Details</marquee><br><br>
+             <br>
+            <!-- <h1 align="center">Personal Details</h1>-->
+        <div class="form1">
+         <form  action="personal.php" method="post" onsubmit="validateForm()">
+            Candidate's Name : <input type="text" name="fname" placeholder="First Name" required style="margin-left:1%" > &nbsp;&nbsp;&nbsp; <input type="text" name="mname" placeholder="Middle Name" required> &nbsp;&nbsp;&nbsp;<input type="text" required name="lname" placeholder="Last Name" >
+            <br><br>
+           
+            Email-Id         : <input type="email"  name="id" required> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  Gender :<input type="radio" name="gender"value="male">Male <input type="radio" name="gender"value="female">Female  <input type="radio" name="gender"value="other">Other                              
+            <br><br>
+
+            Date of Birth    : <input type="date" name="bday">  &nbsp;&nbsp;&nbsp;   Contact Number   : <input type="text"  id="con" name="phone">
+            <br><br>
+            
+            Nationality      :  <input type="text" id="nation"  name="nation" required>  &nbsp;&nbsp;&nbsp; Religion : <input type="text"  name="religion" required>
+            <br><br>
+            <input name="submit" type="Submit" margin-left:15%>           
+        
+        </form>
+
+        <script>
+            function validateForm() {
+                var phone,nationality;
+                nationality = document.getElementById("nation").value;
+                phone = document.getElementById("con").value;         
+                if (isNaN(phone) || phone.length>10 || phone == "") {
+                    alert("Please enter a 10 digit no.");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+
+
+    </div>
+    </body>
+
+</html>

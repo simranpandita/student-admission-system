@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>College Details</title>
+        <link rel="stylesheet" href="college.css">
+    </head>
+    <style>
+        marquee{  width: 100%;
+           height:"40px";
+           padding: 10px 0 30px 0;
+           background-color: black;
+          
+           color:yellow;
+           font-size:40px;
+           
+        }
+        .b6{
+        margin-left:85%;   
+    }
+           </style>
+
+    <body  background="BG2.jpg" >
+            <div class="upperbody">
+                
+                <a href="page1.php" ><img width="415px" height="121px" src="img5.jpg"></a>
+                 <a href="page1.php"   style="margin-top: 50px">Home</a>
+                <a href="listofclg.html"  style="margin-top: 50px">Colleges</a>	
+                <a href="aboutus.html"  style="margin-top: 50px">About Us</a>
+                <a href="contactus.html"  style="margin-top: 50px">Contact Us</a>
+                <button class="b6" onclick="location.href='logout.php';">Log out</button>
+                
+                    
+            </div>
+            <br><br>
+            <marquee>College Details &nbsp;   &nbsp; &nbsp;   &nbsp; &nbsp;   &nbsp;College Details &nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;College Details</marquee><br><br>
+        <h3 style="margin-left: 30%;font-size: 20px">Enter your college preferences</h3>
+        <form name="form4" action="college.php" method="POST">
+            Enter the name of the branch :<select name="branch"><option value="blank"></option> <option value="cmpn">Computer Engineering</option> <option value="it">Infromation Technology</option> <option value="extc">Electronics & Telecommunications</option>  <option value="mech">Mechanical Engineering</option></select>
+            <br><br>
+            Enter preference 1 : <select name="pf1"><option value="blank"></option> <option value="Vesit">VESIT</option>  <option value="vjti">VJTI</option><option value="RAIT">RAIT</option>  <option value="TSEC">TSEC</option><option value="Somaya">SOMAYA</option></select>
+            <br><br>
+            Enter preference 2 : <select name="pf2"><option value="blank"></option> <option value="Vesit">VESIT</option>  <option value="vjti">VJTI</option><option value="RAIT">RAIT</option>  <option value="TSEC">TSEC</option><option value="Somaya">SOMAYA</option></select>
+            <br><br>
+            Enter preference 3 : <select name="pf3"><option value="blank"></option> <option value="Vesit">VESIT</option>  <option value="vjti">VJTI</option><option value="RAIT">RAIT</option>  <option value="TSEC">TSEC</option><option value="Somaya">SOMAYA</option></select>
+            <br><br>
+           
+            <input type="submit" name="collegesubmit">
+        </form>
+    </body>
+</html>

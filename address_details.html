@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Address Details</title>
+        <link rel="stylesheet" href="address.css">
+       <style> marquee{  width: 100%;
+            height:"40px";
+             padding: 10px 0 30px 0;
+             background-color: black;
+             color:yellow;
+             font-size:40px;
+            
+          }
+          .b6{
+          margin-left:85%;   
+          }   
+        </style> 
+
+        <script>
+            function validateForm() {
+            var pcode;
+            pcode = document.getElementById("pin").value;
+            if (isNaN(pcode) || pcode.length>6 || pcode == "") {
+            alert("Please enter a valid pincode");
+            return true;
+            }
+        }
+        </script>
+
+
+        
+    </head>
+
+    <body  background="BG2.jpg" >
+            <div class="upperbody">
+                
+                <a href="page1.php" ><img width="415px" height="121px" src="img5.jpg"></a>
+                 <a href="page1.php"   style="margin-top: 50px">Home</a>
+                <a href="listofclg.html"  style="margin-top: 50px">Colleges</a>	
+                <a href="aboutus.html"  style="margin-top: 50px">About Us</a>
+                <a href="contactus.html"  style="margin-top: 50px">Contact Us</a>
+                <button class="b6" onclick="location.href='logout.php';">Log out</button>
+                
+            </div>
+            <br><br>
+            <marquee>Address Details&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;Address Details &nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;Address Details</marquee>
+            <br><br>
+            <div class="form2">
+                <form action="address.php" method="post" onsubmit="return validatForm()>
+                    Residential Address : <br><textarea placeholder="Enter your native address" name="address" id="add" rows="5" cols="40" required></textarea>
+                    <br><br>
+                    District:<select name="district"><option value="Maharashtra">Maharashtra</option> <option value="Goa">Goa</option><option value="BIhar">Bihar</option><option value="Hyderabad">Hyderabad</option><option value="Chennai">Chennai</option> <option value="Mahe">Mahe</option><option value="Kutch">Kutch</option></select>
+                    <br><br>
+                    State:<select name="state"><option value="Goa">Goa</option> <option value="BIhar">BIhar</option><option value="Maharashtra">Maharashtra</option><option value="Hyderabad">Hyderabad</option><option value="Chennai">Chennai</option> <option value="Mahe">Mahe</option><option value="Kutch">Kutch</option></select>
+                    <br><br>
+                    City:<select name="city"><option value="Maharashtra">Maharashtra</option> <option value="Goa">Goa</option><option value="BIhar">BIhar</option><option value="Hyderabad">Hyderabad</option><option value="Chennai">Chennai</option> <option value="Mahe">Mahe</option><option value="Kutch">Kutch</option></select>
+                    <br><br>
+                    Pincode:<input type="text"  id="pin" name="code">
+                    <br><br>
+                    <input name="addresssubmit" type="Submit" margin-left:15%>
+                </form>
+             </div>
+             
+            </body>
+</html>

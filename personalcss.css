@@ -1,0 +1,29 @@
+.form1{
+    margin-left: 20%;
+  
+    font-size: 20px;
+}
+body {font-family: Verdana, sans-serif;}
+.upperbody
+{ 
+    overflow:hidden;
+
+    font-size:15px;
+  
+}
+
+.upperbody a
+{
+    float:left;
+    padding:10px 10px;
+    color:Black;
+    text-align:center;
+    text-decoration:none;
+    font-size:20px;
+}	
+.upperbody a:hover
+{
+    background-color: gainsboro;
+    color:black;
+}
+

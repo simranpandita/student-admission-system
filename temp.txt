@@ -1,0 +1,40 @@
+<script>
+	function validateForm() {
+	var pcode;
+	pcode = document.getElementById("pin").value;
+	if (isNaN(pcode) || pcode.length>6 || pcode == "") {
+	alert("Please enter a valid pincode");
+	return true;
+	}
+}
+</script>
+
+<script>
+                function validateForm(){
+                    var ssc1,ssc2,hsc1,hsc2;
+                    ssc1=document.getElementById("agg1").value;
+                    ssc2=document.getElementById("per1").value;
+                    if(isNaN(ssc1)|| ssc1>500 || ssc1<0 || ssc1==""){
+                        alert("Please enter valid marks credentials");
+                        return true;
+                    }
+
+                    if(isNaN(ssc2)|| ssc2<0 || ssc2>100 || ssc2 ==""){
+                        alert("Please enter valid marks credentials");
+                        return true;
+                    }
+
+                    hsc1=document.getElementById("agg2").value;
+                    hsc2=document.getElementById("per2").value;
+                    if(isNaN(hsc1)|| hsc1>600 || hsc1<0 || hsc1==""){
+                        alert("Please enter valid marks credentials");
+                        return true;
+                    }
+
+                    if(isNaN(ssc2)|| hsc2<0 || hsc2>100 || hsc2==""){
+                        alert("Please enter valid marks credentials");
+                        return true;
+                    }
+
+                }
+            </script>
